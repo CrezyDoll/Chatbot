@@ -10,10 +10,10 @@ import time
 from datetime import datetime
 #from database.users_chats_db import db
 
-API_ID = "14050586"
-API_HASH = "42a60d9c657b106370c79bb0a8ac560c"
+API_ID = ""
+API_HASH = ""
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
-MONGO_URL = "mongodb+srv://hnyx:wywyw2@cluster0.9dxlslv.mongodb.net/?retryWrites=true&w=majority"
+MONGO_URL = ""
 DATABASE_NAME = os.environ.get("DATABASE_NAME") 
 BOT_USERNAME = os.environ.get("BOT_USERNAME")
 BOT_NAME = os.environ.get("BOT_NAME")
@@ -36,13 +36,13 @@ async def is_admins(chat_id: int):
     ]
 
 
-EMOJIOS = [ 
-      "⚡",
-      "⚡",
-]
+
       
 START = f"""
-**๏ Hie Baby🐒 ๏**
+**🥀 𝙃𝙀𝙇𝙇𝙊, 𝙈𝙔 𝙎𝙀𝙇𝙁 𝙉𝙄𝘿𝙃𝙄! 
+𝘼 𝙋𝙊𝙒𝙀𝙍𝙁𝙐𝙇 𝘼𝙉𝘿 𝙁𝘼𝙎𝙏𝙀𝘿 𝘾𝙃𝘼𝙏𝘽𝙊𝙏 𝙊𝙁 𝙏𝙀𝙇𝙀𝙂𝙍𝘼𝙈.
+
+𝙈𝘼𝘿𝙀 𝘽𝙔 ❤️ 𝘼𝙉𝘿 [𝙎𝘼𝙉𝙂𝙍𝘼𝙈](https://t.me/Backup_Bosss)**
 """
 
 @bot.on_message(filters.command(["start", "aistart", f"start@{BOT_USERNAME}"]))
@@ -50,16 +50,6 @@ async def restart(client, m: Message):
     accha = await m.reply_text(
                 text = random.choice(EMOJIOS),
     )
-    await asyncio.sleep(1)
-    await accha.edit("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠..")
-    await asyncio.sleep(0.1)
-    await accha.edit("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠...")
-    await asyncio.sleep(0.1)
-    await accha.edit("𝐒𝐭𝐚𝐫𝐭𝐢𝐧𝐠....")
-    await asyncio.sleep(0.1)
-    await accha.edit("𝐒𝐭𝐚𝐫𝐭𝐞𝐝.✓")
-    await asyncio.sleep(0.2)
-    await accha.edit("🥵𝙽𝙾𝚆 𝙲𝙾𝙼𝙴 𝙷𝙴𝚁𝙴 👉 @TG_FRIENDSS🥀 𝙰𝙽𝙳 𝙼𝙰𝙺𝙴 𝙶𝙸𝚁𝙻𝙵𝚁𝙸𝙴𝙽𝙳🌹💋")
        
 @bot.on_message(
     filters.command(["chatbot off", f"chatbot@{BOT_USERNAME} off"], prefixes=["/", ".", "?", "-"])

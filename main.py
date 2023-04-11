@@ -10,13 +10,13 @@ import time
 from datetime import datetime
 #from database.users_chats_db import db
 
-API_ID = ""
-API_HASH = ""
+API_ID = "21571508"
+API_HASH = "d2f1d8d4a3626a0dc93bb46c1f827a88"
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
-MONGO_URL = ""
+MONGO_URL = "mongodb+srv://AlexRobot:AlexRobotOp555@cluster0.emsuz0p.mongodb.net/?retryWrites=true&w=majority"
 DATABASE_NAME = os.environ.get("DATABASE_NAME") 
-BOT_USERNAME = os.environ.get("BOT_USERNAME")
-BOT_NAME = os.environ.get("BOT_NAME")
+BOT_USERNAME = os.environ.get("Nidhi_ChatBot")
+BOT_NAME = os.environ.get("Nidhi")
 ADMINS = os.environ.get("ADMINS")
 
 bot = Client(
